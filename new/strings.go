@@ -10,7 +10,7 @@ func main() {
 	fmt.Println(len(s))
 
 	for i, char := range []rune(s) {
-		fmt.Printf("(%d %c)", i , char)
+		fmt.Printf("(%d %c)", i, char)
 	}
 	fmt.Println()
 

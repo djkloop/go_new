@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"reflect"
 	"runtime"
-	"math"
 )
 
 func eval(a, b int, op string) (int, error) {
@@ -32,10 +32,9 @@ func div(a, b int) (q, r int) {
 func apply(op func(int, int) int, a, b int) int {
 	p := reflect.ValueOf(op).Pointer()
 	opName := runtime.FuncForPC(p).Name()
-	fmt.Printf("Calling func %s with args " + "(%d, %d)\n", opName, a, b)
+	fmt.Printf("Calling func %s with args "+"(%d, %d)\n", opName, a, b)
 	return op(a, b)
 }
-
 
 func pow(a, b int) int {
 	return int(math.Pow(float64(a), float64(b)))
@@ -60,5 +59,5 @@ func main() {
 	fmt.Println(q, r)
 
 	fmt.Println(apply(pow, 3, 4))
-	fmt.Println(sum(1,2,3,4,5))
+	fmt.Println(sum(1, 2, 3, 4, 5))
 }

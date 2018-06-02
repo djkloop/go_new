@@ -4,7 +4,7 @@ import "fmt"
 
 func printArray(arr [5]int) {
 	for i, v := range arr {
-		fmt.Println(i ,v)
+		fmt.Println(i, v)
 	}
 }
 
@@ -20,7 +20,7 @@ func main() {
 		fmt.Println(arr3[i])
 	}
 
-	for i := range arr3{
+	for i := range arr3 {
 		fmt.Println(arr3[i])
 	}
 

@@ -10,8 +10,8 @@ var bString = "bbbb"
 var cBoolean = true
 
 var (
-	dInt = 444
-	eString = "rrr"
+	dInt     = 444
+	eString  = "rrr"
 	fBoolean = false
 )
 
@@ -29,7 +29,7 @@ func variableInitialValue() {
 
 func variableTypeDeduction() {
 	var a, b, c, s = 3, 4, true, "def"
-	fmt.Println(a,b,c,s)
+	fmt.Println(a, b, c, s)
 }
 
 func variableType() {
@@ -40,19 +40,19 @@ func variableType() {
 func triangle() {
 	var a, b int = 3, 4
 	var c int
-	c = int(math.Sqrt(float64(a * a + b * b)))
+	c = int(math.Sqrt(float64(a*a + b*b)))
 	fmt.Println(c)
 }
 
 func consts() {
 	const (
 		filenames = "abcc.txt"
-		cc = 4
+		cc        = 4
 	)
 	const filename string = "abc.txt"
-	const a, b= 3, 4
+	const a, b = 3, 4
 	var c int
-	c = int(math.Sqrt(a * a + b * b))
+	c = int(math.Sqrt(a*a + b*b))
 	fmt.Println(filename, c)
 	fmt.Println(filenames, cc)
 }
@@ -75,7 +75,7 @@ func enums() {
 		pb
 	)
 
-	fmt.Println(cpp, javascript,java, python, golang)
+	fmt.Println(cpp, javascript, java, python, golang)
 	fmt.Println(b, kb, mb, gb, tb, pb)
 
 }
@@ -86,8 +86,8 @@ func main() {
 	variableInitialValue()
 	variableTypeDeduction()
 	variableType()
-	fmt.Println(aInt,bString,cBoolean)
-	fmt.Println(dInt,eString,fBoolean)
+	fmt.Println(aInt, bString, cBoolean)
+	fmt.Println(dInt, eString, fBoolean)
 	triangle()
 	consts()
 	enums()
